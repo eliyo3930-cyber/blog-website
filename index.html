@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBlog - Tech & Web Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Dev<span>Blog</span></div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="profile.html">Profile</a>
+            <a href="contact.php">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to DevBlog</h1>
+            <p>A place to read, share, and discuss modern web development ideas.</p>
+        </section>
+
+        <!-- Public API Inspiration Quote Section -->
+        <section class="api-card">
+            <h3>💡 Daily Tech Inspiration (Public API)</h3>
+            <blockquote id="apiQuote">Loading inspiration...</blockquote>
+            <p id="apiAuthor" class="author-text"></p>
+            <button onclick="fetchNewQuote()" class="btn-sm">New Quote</button>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="blog-section">
+            <h2>Latest Posts</h2>
+            <div id="postsGrid" class="posts-grid">
+                <!-- Dynamic Posts Render Here -->
+            </div>
+        </section>
+
+        <!-- Create New Post Form -->
+        <section class="form-card">
+            <h2>Create New Post</h2>
+            <form id="createPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" placeholder="Enter post title" required>
+                </div>
+                <div class="form-group">
+                    <label for="postCategory">Category</label>
+                    <select id="postCategory">
+                        <option value="Web Dev">Web Dev</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="PHP & DB">PHP & DB</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" rows="4" placeholder="Write your blog post here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Publish Post</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DevBlog. Built with HTML, CSS, JavaScript, and PHP.</p>
+    </footer>
+
+    <script src="module.js"></script>
+    <script src="body-part.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
